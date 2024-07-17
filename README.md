@@ -4,10 +4,7 @@
 - **assword Composition Analysis**: Provides a detailed breakdown of the password's composition and structure, helping users understand strengths and weaknesses.
 - **Estimated Crack Time**: Predicts how long it would take for an attacker to crack the password using brute force or dictionary-based attacks.
 
-### **DEMO**
-**NOTE: MIGHT NOT WORK PROPERLY IN DEMO** (CASUSE THIS IS ONLY FOR THE UI REPRESENTATION)
-![xyz-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e8941228-ab97-4f1d-b12c-5354dc0ab716)
-
+### **DEMO** **NOTE: MIGHT NOT WORK PROPERLY IN DEMO** (CASUSE THIS IS ONLY FOR THE UI REPRESENTATION)
 [CLICK FOR DEMO ](https://yadavnikhil03.github.io/Password_evaluation_tool/)
 
 ### **Requirements** 
