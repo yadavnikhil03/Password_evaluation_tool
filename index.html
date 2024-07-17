@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="container">
+        <h1>Password Evaluation Tool</h1>
+        <form onsubmit="return false;">
+            <input type="password" id="password" placeholder="Enter your password" oninput="checkPassword()">
+            <div id="strength" class="result">Password strength: Weak</div>
+            <div id="length" class="result">Length: 0</div>
+            <div id="numbers" class="result">Numbers: false</div>
+            <div id="lowercase" class="result">Lowercase letters: false</div>
+            <div id="uppercase" class="result">Uppercase letters: false</div>
+            <div id="specialChars" class="result">Special characters: false</div>
+            <div id="time_to_crack" class="result">Estimated time to crack: 0 years, 0 days, 0 hours, 0 minutes, 0 seconds</div>
+            <p class="note">Note: If no estimated time to crack is shown for your password, then it can potentially be cracked within milliseconds.</p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: 200% 200%;
+    animation: gradientBackground 10s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="password"] {
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    animation: inputPulse 2s infinite;
+}
+
+@keyframes inputPulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(70, 130, 180, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(70, 130, 180, 0.3); }
+}
+
+input[type="password"]:focus {
+    transform: scale(1.05);
+    border-color: #3f5efb;
+}
+
+.result {
+    color: #fc466b;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.5s;
+}
+
+.result.green {
+    color: #3f5efb;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.note {
+    font-style: italic;
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    animation: rotateBackground 8s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
