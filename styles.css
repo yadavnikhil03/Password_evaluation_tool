@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Password Input Styles */
+.password-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: stretch; /* Ensure children take full width */
+    margin-bottom: 20px; /* Increased margin to separate input and strength meter */
+}
+#password {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    flex: 1;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    background: url('eye-icon.png') no-repeat center center;
+    background-size: contain;
+}
+/* Strength Meter Styles */
+.strength-meter {
+    height: 20px; /* Increase height for a thicker bar */
+    width: 100%; /* Full width of the container */
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0; /* Ensure there is space above and below the meter */
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.strength-meter.weak .strength-meter-fill {
+    width: 33%;
+    background-color: red;
+}
+
+.strength-meter.medium .strength-meter-fill {
+    width: 66%;
+    background-color: orange;
+}
+
+.strength-meter.strong .strength-meter-fill {
+    width: 100%;
+    background-color: green;
+}
+
+/* Social Links Styles */
+.social-links {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right edge of the viewport */
+    display: flex;
+    gap: 10px; /* Space between logos */
+    z-index: 1000; /* Ensure it is on top of other content */
+}
+
+.social-links img {
+    width: 40px; /* Adjust size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for logos */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-links img:hover {
+    opacity: 0.7; /* Optional: add hover effect */
+}
+
+#panner .front {
+    visibility: hidden;
+}
+#teste {
+    display: none; 
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #FF6F61; }
+    25% { background-color: #2fe9e9; }
+    50% { background-color: #8cfc8c; }
+    75% { background-color: #6A5ACD; }
+    100% { background-color: #feb47b; }
+}
+
+body {
+    animation: backgroundAnimation 5s infinite;
+}

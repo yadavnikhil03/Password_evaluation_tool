@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Evaluation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="particles.js"></script>
+    <style>
+        /* Cursor Styles */
+        :root {
+            --primary: #a5d95a;
+            --pointer-size: 22px;
+        }
+
+        * {
+            cursor: none;
+        }
+
+        #pointer {
+            content: '';
+            background: var(--primary);
+            width: var(--pointer-size);
+            height: var(--pointer-size);
+            transform: rotate(45deg);
+            position: absolute;
+            z-index: 0;
+            display: block;
+            outline-color: var(--primary);
+            outline-style: solid;
+            outline-width: 2px;
+            animation: cursor 1s infinite;
+            box-shadow: 0px 0px 20px var(--primary);
+        }
+
+        @keyframes cursor {
+            from {
+                outline-offset: 0px;
+            }
+            to {
+                outline-offset: 10px;
+                outline-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter your password" oninput="checkPassword()">
+            <button type="button" id="togglePassword">
+                <i class="eye-icon"></i>
+            </button>
+            
+            <div id="strengthMeter" class="strength-meter"></div>
+        </div>
+        <div id="strength" class="strength-meter"></div>
+        <div id="properties">
+            <p id="length">Length: at least 8 characters</p>
+            <p id="numbers">Contains numbers</p>
+            <p id="lowercase">Contains lowercase letters</p>
+            <p id="uppercase">Contains uppercase letters</p>
+            <p id="specialChars">Contains special characters</p>
+        </div>
+        <div id="time_to_crack"></div>
+
+        <div style="margin-top: 20px; color: #d9534f; font-size: 16px; font-style: italic; font-weight: bold; background-color: #f8d7da; padding: 10px; border-radius: 5px;">
+            NOTE: If 0 time to crack is shown, it means the password can be cracked within milliseconds.
+        </div>
+        
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://github.com/yadavnikhil03" target="_blank">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/yadavnikhil-" target="_blank">
+                <img src="images/LinkedIn.png" alt="LinkedIn">
+            </a>
+        </div>
+        
+        <!-- Custom Cursor Elements -->
+        <div id="pointer"></div>
+        <div id="panner" data-cursor="stretch" class="panner">
+            <div class="front disable-all">&larr; pan me &rarr;</div>
+        </div>
+        <div id="teste" class="front"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="cursor-animation.js"></script>
+</body>
+</html>
