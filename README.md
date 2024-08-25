@@ -20,7 +20,7 @@ Install the required things using:
 
 ### **Usage**
 
-1. Download the latest package from [Releases](#).
+1. Download the latest package from [Releases](https://github.com/yadavnikhil03/Password_evaluation_tool/releases/tag/tool).
 2. Extract the ZIP file.
 3. Drag and drop the extracted folder into VS Code.
 4. Run `main.py`.
