@@ -20,11 +20,12 @@ Install the required things using:
 
 ### **Usage**
 
--Download the Latest packge from Releases.
--Extract the ZIP.
--Now Drag and Drop the Extracted Folder on VS-Code. 
--Run the main.py .
--This will automatically open your default browser at [localhost](http://localhost:8000).
+1. Download the latest package from [Releases](#).
+2. Extract the ZIP file.
+3. Drag and drop the extracted folder into VS Code.
+4. Run `main.py`.
+5. Your default browser will automatically open at [localhost:8000](http://localhost:8000).
+
 
 3. **Evaluate Passwords:**
  - Enter your password in the web interface to check its strength and receive an estimation of the time required to crack it using brute force attacks.
